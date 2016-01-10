@@ -42,6 +42,7 @@ class build_scripts(Command):
         self.scripts = self.distribution.scripts
 
     def get_source_files(self):
+        """Called by `sdist` command to gather files for distribution."""
         return self.scripts
 
     def run(self):
